@@ -1,0 +1,25 @@
+﻿<Window x:Class="CalculadoraEstadisticaWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CalculadoraEstadisticaWPF"
+        xmlns:lvc="clr-namespace:LiveCharts;assembly=LiveCharts"
+        mc:Ignorable="d"
+        Title="Calculadora Estadística" Height="500" Width="600" WindowStartupLocation="CenterScreen" Icon="Images/Calculator.ico">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+        </Grid.RowDefinitions>
+        <Label Grid.Row="0">Introducir números separados por ;</Label>
+        <TextBox Grid.Row="1" Name="txtInput" Text="{Binding TxtInput}" TextWrapping="Wrap" AcceptsReturn="True"></TextBox>
+        <Button Grid.Row="2" Name="btnCalcularEstadisticas" Command="{Binding ClickCommand}">Calcular Estadísticas</Button>
+        <TextBox Grid.Row="3" Name="txtOutput" Text="{Binding TxtOutput}" IsReadOnly="True"></TextBox>
+        <lvc:LineChart Grid.Row="4" Name="Chart"   LegendLocation="Right" Series="{Binding Series}"></lvc:LineChart>
+        
+    </Grid>
+</Window>
