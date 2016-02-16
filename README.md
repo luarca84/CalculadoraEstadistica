@@ -1,7 +1,7 @@
 # CalculadoraEstadistica
 Calculadora Estadistica en WPF
 
-Hize uso de dos librerias Open Source:
+Hace uso de dos librerias Open Source:
 
 * [mathnet-numerics](http://github.com/mathnet/mathnet-numerics)
 * [Live-Charts](https://github.com/beto-rodriguez/Live-Charts)
